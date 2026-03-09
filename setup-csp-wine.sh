@@ -93,7 +93,6 @@ ok "Global Windows version set to Windows 10."
 # =============================================================================
 
 log "Adding concrt140 DLL override (native,builtin)..."
-WINEDEBUG=-all wineboot -u
 wine reg add "HKCU\\Software\\Wine\\DllOverrides" /v "concrt140" /t REG_SZ /d "native,builtin" /f
 ok "concrt140 override added."
 
@@ -102,7 +101,8 @@ ok "concrt140 override added."
 # =============================================================================
 
 log "Installing Microsoft Edge... (Edge may crash after opening — this is expected)"
-WINEDEBUG=-all wine "$SCRIPT_DIR/MicrosoftEdgeSetup.exe" &
+# Disable winemenubuilder to prevent Edge from hijacking system default browser
+WINEDEBUG=-all WINEDLLOVERRIDES="winemenubuilder.exe=d" wine "$SCRIPT_DIR/MicrosoftEdgeSetup.exe" &
 EDGE_PID=$!
 sleep 30
 # Kill any leftover Edge processes
@@ -114,7 +114,7 @@ ok "Microsoft Edge installation done."
 # =============================================================================
 
 log "Installing Microsoft Edge WebView2 135.0.3179.85... (may crash after — this is expected)"
-WINEDEBUG=-all wine "$SCRIPT_DIR/MicrosoftEdgeWebView2RuntimeInstallerX64.exe" &
+WINEDEBUG=-all WINEDLLOVERRIDES="winemenubuilder.exe=d" wine "$SCRIPT_DIR/MicrosoftEdgeWebView2RuntimeInstallerX64.exe" &
 sleep 20
 WINEDEBUG=-all wineserver -k 2>/dev/null || true
 ok "WebView2 installation done."
