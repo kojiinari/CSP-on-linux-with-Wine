@@ -9,7 +9,7 @@
 #      https://www.microsoft.com/en-us/edge/download
 #
 #   2. MicrosoftEdgeWebView2RuntimeInstallerX64.exe  (version 135.0.3179.85)
-#      https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/2885f0d8-0c6e-4ea5-ad6c-d9f636c58619/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
+#      https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/76eb3dc4-7851-45b7-a392-460523b0e2bb/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
 #
 #   3. CSP_410w_setup.exe  (version 4.1.0)
 #      https://vd.clipstudio.net/clipstudio/csp/win/CSP_410w_setup.exe
