@@ -61,7 +61,7 @@ The script will:
 Launch CSP from your app launcher, or run manually:
 
 ```bash
-WINEPREFIX="$HOME/.wine-csp" WINEESYNC=1 WINEFSYNC=1 wine \
+WINEPREFIX="$HOME/.wine-csp" WINEESYNC=1 wine \
   "$HOME/.wine-csp/drive_c/Program Files/CELSYS/CLIP STUDIO 1.5/CLIP STUDIO PAINT/CLIPStudioPaint.exe"
 ```
 
@@ -95,7 +95,7 @@ WINEPREFIX="$HOME/.wine-csp" wineserver -k
 
 ---
 
-## Esync / Fsync
+## Esync
 
 This fixes issues with the menus and panels taking forever to open.
 Enabled by default in the desktop shortcut created by the script (`WINEESYNC=1`).
