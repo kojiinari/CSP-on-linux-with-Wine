@@ -155,7 +155,7 @@ mkdir -p "$HOME/.local/share/applications"
 cat > "$DESKTOP_FILE" << EOF
 [Desktop Entry]
 Name=Clip Studio Paint
-Exec=env WINEPREFIX="$WINEPREFIX" WINEESYNC=1 WINEFSYNC=1 wine "$CSP_EXE"
+Exec=env WINEPREFIX="$WINEPREFIX" WINEESYNC=1 wine "$CSP_EXE"
 Type=Application
 Categories=Graphics;
 StartupWMClass=clipstudiopaint.exe
@@ -180,7 +180,7 @@ echo -e "${GREEN}  Clip Studio Paint 4.1.0 setup complete!   ${NC}"
 echo -e "${GREEN}=============================================${NC}"
 echo ""
 echo -e "Launch with:"
-echo -e "  ${CYAN}WINEPREFIX=\"$WINEPREFIX\" WINEESYNC=1 WINEFSYNC=1 wine \"$CSP_EXE\"${NC}"
+echo -e "  ${CYAN}WINEPREFIX=\"$WINEPREFIX\" WINEESYNC=1 wine \"$CSP_EXE\"${NC}"
 echo ""
 echo -e "Or use the desktop shortcut in your app launcher."
 echo ""
