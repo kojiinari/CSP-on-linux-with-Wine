@@ -28,8 +28,8 @@ Download all three files and place them in the **same folder as `setup-csp-wine.
 | File | Version | Link |
 |---|---|---|
 | `MicrosoftEdgeSetup.exe` | any | https://www.microsoft.com/en-us/edge/download |
-| `MicrosoftEdgeWebView2RuntimeInstallerX64.exe` | **135.0.3179.85** | https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/2885f0d8-0c6e-4ea5-ad6c-d9f636c58619/MicrosoftEdgeWebView2RuntimeInstallerX64.exe |
-| `CSP_410w_setup.exe` | **4.1.0** | https://vd.clipstudio.net/clipstudio/csp/win/CSP_410w_setup.exe |
+| `MicrosoftEdgeWebView2RuntimeInstallerX64.exe` | **135.0.3179.85** | https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/76eb3dc4-7851-45b7-a392-460523b0e2bb/MicrosoftEdgeWebView2RuntimeInstallerX64.exe |
+| `CSP_410w_setup.exe` | **4.1.0** | https://vd.clipstudio.net/clipcontent/paint/app/410/CSP_410w_setup.exe |
 
 > **Why these specific versions?**
 > WebView2 **135.0.3179.85** combined with Windows 7 compatibility mode is what fixes the launcher's asset store. Other versions may cause a black loading screen that never resolves.
