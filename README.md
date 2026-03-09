@@ -113,6 +113,7 @@ Log out and back in for it to take effect.
 ## Known Issues
 
 Menus will appear as a seperate window, and you need to switch to them from the taskbar to be able to see them. 
+
 This is only tested to work with CSP 4.1. YMMV on other versions.
 
 ---
