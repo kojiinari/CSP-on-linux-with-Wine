@@ -93,7 +93,8 @@ ok "Global Windows version set to Windows 10."
 # =============================================================================
 
 log "Adding concrt140 DLL override (native,builtin)..."
-WINEDEBUG=-all winetricks -q --force concrt140
+WINEDEBUG=-all wineboot -u
+wine reg add "HKCU\\Software\\Wine\\DllOverrides" /v "concrt140" /t REG_SZ /d "native,builtin" /f
 ok "concrt140 override added."
 
 # =============================================================================
