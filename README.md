@@ -97,15 +97,9 @@ WINEPREFIX="$HOME/.wine-csp" wineserver -k
 
 ## Esync / Fsync
 
-Both are enabled by default in the desktop shortcut created by the script (`WINEESYNC=1 WINEFSYNC=1`).
-
-For Fsync to work your kernel must support `FUTEX_WAITV` (Linux 5.16+). Check with:
-
-```bash
-grep FUTEX /boot/config-$(uname -r)
-```
-
-For Esync, raise your file descriptor limit by adding this to `/etc/security/limits.conf`:
+This fixes issues with the menus and panels taking forever to open.
+Enabled by default in the desktop shortcut created by the script (`WINEESYNC=1`).
+Raise your file descriptor limit by adding this to `/etc/security/limits.conf`:
 
 ```
 yourusername hard nofile 524288
@@ -118,12 +112,8 @@ Log out and back in for it to take effect.
 
 ## Known Issues
 
-- **Edge crashes after installing** — expected, harmless
-- **WebView2 crashes on its own after running** — expected, harmless
-- **Launcher home screen is black** — usually means WebView2 version or Windows 7 compat override wasn't applied correctly; re-check the registry entry for `msedgewebview2.exe`
-- **Installer appears stuck at ~85%** — just wait, it will finish
-
-Report Wine bugs at: https://bugs.winehq.org/buglist.cgi
+Menus will appear as a seperate window, and you need to switch to them from the taskbar to be able to see them. 
+This is only tested to work with CSP 4.1. YMMV on other versions.
 
 ---
 
