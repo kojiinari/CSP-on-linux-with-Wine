@@ -12,7 +12,7 @@
 #      https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/76eb3dc4-7851-45b7-a392-460523b0e2bb/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
 #
 #   3. CSP_410w_setup.exe  (version 4.1.0)
-#      https://vd.clipstudio.net/clipstudio/csp/win/CSP_410w_setup.exe
+#      https://vd.clipstudio.net/clipcontent/paint/app/410/CSP_410w_setup.exe
 #
 # Place all three files in the same directory as this script, then run:
 #   chmod +x setup-csp-wine.sh && ./setup-csp-wine.sh
