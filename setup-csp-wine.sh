@@ -9,10 +9,10 @@
 #      https://www.microsoft.com/en-us/edge/download
 #
 #   2. MicrosoftEdgeWebView2RuntimeInstallerX64.exe  (version 135.0.3179.85)
-#      https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/76eb3dc4-7851-45b7-a392-460523b0e2bb/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
+#      https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/2885f0d8-0c6e-4ea5-ad6c-d9f636c58619/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
 #
 #   3. CSP_410w_setup.exe  (version 4.1.0)
-#      https://vd.clipstudio.net/clipcontent/paint/app/410/CSP_410w_setup.exe
+#      https://vd.clipstudio.net/clipstudio/csp/win/CSP_410w_setup.exe
 #
 # Place all three files in the same directory as this script, then run:
 #   chmod +x setup-csp-wine.sh && ./setup-csp-wine.sh
@@ -93,7 +93,7 @@ ok "Global Windows version set to Windows 10."
 # =============================================================================
 
 log "Adding concrt140 DLL override (native,builtin)..."
-wine reg add "HKCU\\Software\\Wine\\DllOverrides" /v "concrt140" /t REG_SZ /d "native,builtin" /f >/dev/null 2>&1
+WINEDEBUG=-all winetricks -q --force concrt140
 ok "concrt140 override added."
 
 # =============================================================================
@@ -155,7 +155,7 @@ mkdir -p "$HOME/.local/share/applications"
 cat > "$DESKTOP_FILE" << EOF
 [Desktop Entry]
 Name=Clip Studio Paint
-Exec=env WINEPREFIX="$WINEPREFIX" WINEESYNC=1 wine "$CSP_EXE"
+Exec=env WINEPREFIX="$WINEPREFIX" WINEESYNC=1 WINEFSYNC=1 wine "$CSP_EXE"
 Type=Application
 Categories=Graphics;
 StartupWMClass=clipstudiopaint.exe
@@ -180,7 +180,7 @@ echo -e "${GREEN}  Clip Studio Paint 4.1.0 setup complete!   ${NC}"
 echo -e "${GREEN}=============================================${NC}"
 echo ""
 echo -e "Launch with:"
-echo -e "  ${CYAN}WINEPREFIX=\"$WINEPREFIX\" WINEESYNC=1 wine \"$CSP_EXE\"${NC}"
+echo -e "  ${CYAN}WINEPREFIX=\"$WINEPREFIX\" WINEESYNC=1 WINEFSYNC=1 wine \"$CSP_EXE\"${NC}"
 echo ""
 echo -e "Or use the desktop shortcut in your app launcher."
 echo ""
