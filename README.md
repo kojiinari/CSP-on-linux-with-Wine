@@ -1,7 +1,6 @@
 # Clip Studio Paint 4.1.0 — Linux Setup (Wine + Winetricks)
 
 A script to install **Clip Studio Paint 4.1.0** on Linux using plain Wine and Winetricks, no Bottles required.
-
 ---
 
 ## Requirements
@@ -109,10 +108,11 @@ yourusername soft nofile 524288
 Log out and back in for it to take effect.
 
 ---
+Note: Seems to work best on Fedora KDE Plasma.
 
 ## Known Issues
 
-Menus will appear as a seperate window, and you need to switch to them from the taskbar to be able to see them. 
+With Gnome, menus will appear as a seperate window, and you need to switch to them from the taskbar to be able to see them. This does not occur in KDE plasma.
 
 This is only tested to work with CSP 4.1. YMMV on other versions.
 
