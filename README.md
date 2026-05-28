@@ -1,6 +1,8 @@
 # Clip Studio Paint 4.1.0 — Linux Setup (Wine + Winetricks)
 
 A script to install **Clip Studio Paint 4.1.0** on Linux using plain Wine and Winetricks, no Bottles required.
+Note: Seems to work best on Fedora KDE Plasma.
+
 ---
 
 ## Requirements
@@ -108,7 +110,6 @@ yourusername soft nofile 524288
 Log out and back in for it to take effect.
 
 ---
-Note: Seems to work best on Fedora KDE Plasma.
 
 ## Known Issues
 
