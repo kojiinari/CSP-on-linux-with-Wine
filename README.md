@@ -1,3 +1,7 @@
+
+This repository has been depreciated and moved to Codeberg here: https://codeberg.org/kojiinari/CSP-on-linux-with-Wine
+
+
 # Clip Studio Paint 4.1.0 — Linux Setup (Wine + Winetricks)
 
 A script to install **Clip Studio Paint 4.1.0** on Linux using plain Wine and Winetricks, no Bottles required.
